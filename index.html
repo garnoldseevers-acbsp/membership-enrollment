@@ -1,5 +1,70 @@
 <style type="text/css">
+    /* Hide Pagination Legend */
     #CustomFormForm .CustomFormTable:first-of-type tr:first-child{
         display: none;
+    }
+    #CustomFormTable:first-of-type{
+        margin-bottom: 30px;
+    }
+    /* Pagination */
+    #CustomFormPager div,
+    #CustomFormPager .current,
+    #CustomFormPager .invalid{
+        width: 150px;
+        height: 30px;
+        position: relative;
+        margin-left: 45px;
+        line-height: 22px;
+        border-style:  none;
+        text-align: left;
+        color: #d0d0d0;
+        background-color: #ffffff;
+    }
+    #CustomFormPager div{
+        color: #d0d0d0;
+    }
+    #CustomFormPager .current{
+        color: #0075b0;
+    }
+    #CustomFormPager .invalid{
+        color: #f47d30;
+    }
+    #CustomFormPager .current a{
+        background-color: #0075b0;
+        border-color: #0075b0;
+        color: #ffffff;
+    }
+    #CustomFormPager .invalid a{
+        background-color: #f47d30;
+        border-color: #f47d30;
+        color: #ffffff;
+    }
+    #CustomFormPager div a{
+        display: block;
+        position: absolute;
+        top: 0px;
+        left: -45px;
+        width: 30px;
+        height: 30px;
+        line-height: 28px;
+        border-style:  solid;
+        border-width: 1px;
+        border-color: #d0d0d0;
+        border-radius: 100px;
+        text-align: center;
+        text-decoration: none;
+        color: #d0d0d0;
+    }
+    #pagination0::after{
+        content:"Institution Information"
+    }
+    #pagination1::after{
+        content:"Contact Information"
+    }
+    #pagination2::after{
+        content:"Eligibility"
+    }
+    #pagination3::after{
+        content:"Confirmation"
     }
 </style>
