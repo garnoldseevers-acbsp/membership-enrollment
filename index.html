@@ -3,7 +3,8 @@
     #CustomFormForm .CustomFormTable:first-of-type tr:first-child{
         display: none;
     }
-    #CustomFormTable:first-of-type{
+    .CustomFormTable:first-of-type{
+        display: block;
         margin-bottom: 30px;
     }
     /* Pagination */
@@ -26,18 +27,36 @@
     #CustomFormPager .current{
         color: #0075b0;
     }
-    #CustomFormPager .invalid{
-        color: #f47d30;
-    }
     #CustomFormPager .current a{
         background-color: #0075b0;
         border-color: #0075b0;
         color: #ffffff;
     }
+    #CustomFormPager .current::after{
+        color: #0075b0;
+    }
+    #CustomFormPager .invalid{
+        color: #f47d30;
+    }
     #CustomFormPager .invalid a{
         background-color: #f47d30;
         border-color: #f47d30;
         color: #ffffff;
+    }
+    #CustomFormPager .invalid::after{
+        color: #f47d30;
+    }
+    #CustomFormPager .valid{
+        color: #b7bf34;
+        background-color: #ffffff;
+    }
+    #CustomFormPager .valid a{
+        background-color: #b7bf34;
+        border-color: #b7bf34;
+        color: #ffffff;
+    }
+    #CustomFormPager .valid::after{
+        color: #b7bf34;
     }
     #CustomFormPager div a{
         display: block;
@@ -56,15 +75,112 @@
         color: #d0d0d0;
     }
     #pagination0::after{
-        content:"Institution Information"
+        content:"Institution"
     }
     #pagination1::after{
-        content:"Contact Information"
+        content:"Staff"
     }
     #pagination2::after{
         content:"Eligibility"
     }
     #pagination3::after{
         content:"Confirmation"
+    }
+    /* Form */
+    .CustomFormTable{
+    }
+    tr{
+        display: block;
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    th, td{
+        display: block;
+        width: 100%;
+    }
+    label{
+        width: 100% !important;
+        font-weight: normal;
+    }
+    input{
+        max-width: 100%;
+    }
+    input[type="checkbox"],
+    input[type="radio"]{
+        display: inline-block;
+        width: auto;
+    }
+    input[type="checkbox"] + label,
+    input[type="radio"] + label{
+        display: inline-block;
+        width: auto !important;
+    }
+    /* Page 1 Layout */
+    @media only screen and (min-width: 480px){
+        #formpage0 tr:nth-child(2){
+            width: 50%;
+            float: left;
+        }
+        #formpage0 tr:nth-child(3){
+            width: 50%;
+            float: left;
+        }
+        #formpage0 tr:nth-child(4){
+            width: 50%;
+            float: left;
+            clear: both;
+        }
+        #formpage0 tr:nth-child(5){
+            width: 50%;
+            float: left;
+        }
+        #formpage0 tr:nth-child(6){
+            width: 33%;
+            float: left;
+            clear: both;
+        }
+        #formpage0 tr:nth-child(7){
+            width: 33%;
+            float: left;
+        }
+        #formpage0 tr:nth-child(8){
+            width: 33%;
+            float: left;
+        }
+        #formpage0 tr:nth-child(9){
+            width: 50%;
+            float: left;
+            clear: both;
+        }
+        #formpage0 tr:nth-child(10){
+            width: 50%;
+            float: left;
+        }
+    }
+    /* Action Buttons */
+    #formpage_saveLnk{
+        color: #ffffff;
+    }
+    #formpage_saveLnk a{
+        border-style: solid;
+        border-width: 1px;
+        border-radius: 5px; 
+        border-color: #f47d30;
+        padding: 10px 25px;
+        color: #f47d30;
+    }
+    #formpage_saveLnk a:hover{
+        border-color: #0075b0;
+        color: #0075b0;
+    }
+    .formbutton{
+        border-radius: 5px;
+        font-size: 16px;
+        background-color: #f47d30;
+    }
+    .formbutton:hover{
+        border-color: #0075b0;
+        color: #ffffff;
+        background-color: #0075b0;
     }
 </style>
