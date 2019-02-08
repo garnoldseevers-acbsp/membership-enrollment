@@ -1,4 +1,20 @@
 <style type="text/css">
+    #CustomFormForm{
+        max-width: 900px;
+        margin: 0 auto;
+    }
+    td#SpContent_Container{
+        padding-right: 15px;
+    }
+    /* Infobox */
+    .infobox{
+        border-color: #d0d0d0;
+        color: #777777;
+        background-color: #efefef;
+    }
+    .infobox img:first-child{
+        display: none;
+    }
     /* Hide Pagination Legend */
     #CustomFormForm .CustomFormTable:first-of-type tr:first-child{
         display: none;
@@ -88,71 +104,234 @@
     }
     /* Form */
     .CustomFormTable{
+        color: #555555;
     }
-    tr{
+    .CustomFormTable tr{
         display: block;
         width: 100%;
         margin-bottom: 30px;
     }
-    th, td{
+    .CustomFormTable th, td{
         display: block;
         width: 100%;
     }
-    label{
+    .CustomFormTable label{
         width: 100% !important;
         font-weight: normal;
+        color: #777777;
     }
-    input{
+    .CustomFormTable input[type="text"],
+    .CustomFormTable select,
+    .CustomFormTable textarea{
         max-width: 100%;
+        height: 44px;
+        line-height: 44px;
+        border-color: #d0d0d0;
+        border-radius: 3px;
+        padding: 0px 15px;
+        background-color: #ffffff;
+        outline: none;
+        outline-color: transparent;
+        outline-style: none;
+        -webkit-appearance:none;
     }
-    input[type="checkbox"],
-    input[type="radio"]{
+    .CustomFormTable input[type="text"]:focus,
+    .CustomFormTable select:focus,
+    .CustomFormTable textarea:focus{
+        border-color: #0075b0;
+        color: #0075b0;
+        outline: none;
+        outline-color: transparent;
+        outline-style: none;
+        -webkit-appearance:none;
+    }
+    .CustomFormTable input[type="text"]{
+        width: 100% !important;
+    }
+    .CustomFormTable select option{
+        padding: 5px 0px;
+    }
+    .CustomFormTable input[type="checkbox"],
+    .CustomFormTable input[type="radio"]{
         display: inline-block;
         width: auto;
     }
-    input[type="checkbox"] + label,
-    input[type="radio"] + label{
+    .CustomFormTable input[type="checkbox"] + label,
+    .CustomFormTable input[type="radio"] + label{
         display: inline-block;
         width: auto !important;
+        font-weight: normal;
     }
-    /* Page 1 Layout */
+    /* Section Headers */
+    /* Section Headers - Set Size of all Section Headers */
+    #formpage0 tr:nth-child(2) label,
+    #formpage0 tr:nth-child(6) label,
+    #formpage0 tr:nth-child(13) label,
+    #formpage0 tr:nth-child(18) label,
+    #formpage1 tr:nth-child(2) label,
+    #formpage1 tr:nth-child(9) label,
+    #formpage1 tr:nth-child(16) label,
+    #formpage1 tr:nth-child(24) label{
+        font-size: 20px;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: #555555;
+    }
+    /* Section Headers - Set Padding and Borders for all section headers but first */
+    #formpage0 tr:nth-child(6) label,
+    #formpage0 tr:nth-child(13) label,
+    #formpage0 tr:nth-child(18) label,
+    #formpage1 tr:nth-child(9) label,
+    #formpage1 tr:nth-child(16) label,
+    #formpage1 tr:nth-child(24) label{
+        clear: both;
+        margin-top: 50px;
+        padding-top: 50px;
+    }
+    /* Section Headers - Hide tr for description of section header */
+    #formpage0 tr:nth-child(3),
+    #formpage0 tr:nth-child(7),
+    #formpage0 tr:nth-child(14),
+    #formpage0 tr:nth-child(19){
+        display: none;
+    }
     @media only screen and (min-width: 480px){
-        #formpage0 tr:nth-child(2){
-            width: 50%;
-            float: left;
-        }
-        #formpage0 tr:nth-child(3){
-            width: 50%;
-            float: left;
-        }
+        /* Page 1 Layout */
         #formpage0 tr:nth-child(4){
             width: 50%;
             float: left;
-            clear: both;
         }
         #formpage0 tr:nth-child(5){
             width: 50%;
             float: left;
         }
-        #formpage0 tr:nth-child(6){
-            width: 33%;
-            float: left;
-            clear: both;
-        }
-        #formpage0 tr:nth-child(7){
-            width: 33%;
-            float: left;
-        }
         #formpage0 tr:nth-child(8){
-            width: 33%;
-            float: left;
-        }
-        #formpage0 tr:nth-child(9){
             width: 50%;
             float: left;
             clear: both;
         }
+        #formpage0 tr:nth-child(9){
+            width: 50%;
+            float: left;
+        }
         #formpage0 tr:nth-child(10){
+            width: 33%;
+            float: left;
+            clear: both;
+        }
+        #formpage0 tr:nth-child(11){
+            width: 33%;
+            float: left;
+        }
+        #formpage0 tr:nth-child(12){
+            width: 33%;
+            float: left;
+        }
+        #formpage0 tr:nth-child(15){
+            width: 33%;
+            float: left;
+        }
+        #formpage0 tr:nth-child(16){
+            width: 33%;
+            float: left;
+        }
+        #formpage0 tr:nth-child(17){
+            width: 33%;
+            float: left;
+        }
+        #formpage0 tr:nth-child(20){
+            width: 33%;
+            float: left;
+        }
+        #formpage0 tr:nth-child(21){
+            width: 33%;
+            float: left;
+        }
+        #formpage0 tr:nth-child(22){
+            width: 33%;
+            float: left;
+        }
+        /* Page 2 Layout */
+        #formpage1 tr:nth-child(4){
+            width: 20%;
+            float: left;
+        }
+        #formpage1 tr:nth-child(5){
+            width: 40%;
+            float: left;
+        }
+        #formpage1 tr:nth-child(6){
+            width: 40%;
+            float: left;
+        }
+        #formpage1 tr:nth-child(7){
+            width: 50%;
+            float: left;
+        }
+        #formpage1 tr:nth-child(8){
+            width: 50%;
+            float: left;
+        }
+        /* Billing Contact */
+        #formpage1 tr:nth-child(11){
+            width: 20%;
+            float: left;
+        }
+        #formpage1 tr:nth-child(12){
+            width: 40%;
+            float: left;
+        }
+        #formpage1 tr:nth-child(13){
+            width: 40%;
+            float: left;
+        }
+        #formpage1 tr:nth-child(14){
+            width: 50%;
+            float: left;
+        }
+        #formpage1 tr:nth-child(15){
+            width: 50%;
+            float: left;
+        }
+        /* Champion Contact */
+        #formpage1 tr:nth-child(18){
+            width: 20%;
+            float: left;
+        }
+        #formpage1 tr:nth-child(19){
+            width: 40%;
+            float: left;
+        }
+        #formpage1 tr:nth-child(20){
+            width: 40%;
+            float: left;
+        }
+        #formpage1 tr:nth-child(21){
+            width: 50%;
+            float: left;
+        }
+        #formpage1 tr:nth-child(22){
+            width: 50%;
+            float: left;
+        }
+        /* Co-Champion Contact */
+        #formpage1 tr:nth-child(26){
+            width: 20%;
+            float: left;
+        }
+        #formpage1 tr:nth-child(27){
+            width: 40%;
+            float: left;
+        }
+        #formpage1 tr:nth-child(28){
+            width: 40%;
+            float: left;
+        }
+        #formpage1 tr:nth-child(29){
+            width: 50%;
+            float: left;
+        }
+        #formpage1 tr:nth-child(30){
             width: 50%;
             float: left;
         }
@@ -183,4 +362,124 @@
         color: #ffffff;
         background-color: #0075b0;
     }
+    .formbutton:hover{
+        border-color: #0075b0;
+        color: #ffffff;
+        background-color: #0075b0;
+    }
+    #formpage_prev{
+        border-style: solid;
+        border-width: 1px;
+        border-radius: 5px; 
+        border-color: #f47d30;
+        padding: 10px 25px;
+        color: #f47d30;
+    }
+    #formpage_prev a{
+        color: #f47d30;
+    }
+    #formpage_prev:hover{
+        border-color: #0075b0;
+        color: #ffffff;
+        background-color: #0075b0;
+    }
+    #formpage_prev:hover a{
+        color: #ffffff;
+    }
+    #formpage_prev a:hover{
+        color: #ffffff;
+    }
+    #formpage_next::after{
+        display: none;
+        content: "NEXT >>";    
+        border-radius: 5px;
+        padding: 10px 25px;
+        text-align: center;
+        text-transform: uppercase;
+        width: auto;
+        font-size: 16px;
+        background-color: #d0d0d0;
+        transition: all 250ms ease-in 0s;
+        height: auto;
+        line-height: 18px;
+        cursor: default;
+    }
 </style>
+<script type="text/javascript">
+    $(document).ready(function(){
+        validate_page_one();
+        if($("[name='Custom_Country']").val()){
+            var selected_country = $("[name='Custom_Country']").val();
+            display_eligibility_requirements(selected_country);
+        }
+        $("[type='text'], select, textarea").each(function(){
+            if( !$(this).val() ){
+                $(this).css("border-color","#d0d0d0");
+                $(this).css("color","#555555");
+            }else{
+                $(this).css("border-color","#b7bf34");
+                $(this).css("color","#b7bf34");
+            }
+        });
+        $("[type='text'], select, textarea").change(function(){
+            if( !$(this).val() ){
+                $(this).css("border-color","#d0d0d0");
+                $(this).css("color","#555555");
+            }else{
+                $(this).css("border-color","#b7bf34");
+                $(this).css("color","#b7bf34");
+            }
+            validate_page_one();
+        });
+        $("[name='Custom_Country']").change(function(){
+            console.log("change");
+            var selected_country = $(this).val();
+            display_eligibility_requirements(selected_country);
+        });
+        function display_eligibility_requirements(selected_country){
+            if(selected_country == "United States of America"){
+                // Show US Confimration and make required
+                $("[name='Custom_Ifyesbywhichaccreditingbody']").attr("required","required");
+                $("#formpage2 .CustomFormTable tr:nth-child(2)").css("display","block");
+                // Hide Non-US Confimration and make optional
+                $("[name='Custom_Ifapplicablewhenisyournextinstitutionalaccreditationvisityear']").removeAttr("required");
+                $("[name='Custom_GovernmentDocuments']").removeAttr("required");
+                $("#formpage2 .CustomFormTable tr:nth-child(3)").css("display","none");
+                $("#formpage2 .CustomFormTable tr:nth-child(4)").css("display","none");
+                $("#formpage2 .CustomFormTable tr:nth-child(5)").css("display","none");
+                $("#formpage2 .CustomFormTable tr:nth-child(6)").css("display","none");
+                $("#formpage2 .CustomFormTable tr:nth-child(7)").css("display","none");
+                $("#formpage2 .CustomFormTable tr:nth-child(8)").css("display","none");
+            }else{
+                // Hide US Confimration and make optional
+                $("#formpage2 .CustomFormTable tr:nth-child(2)").css("display","none");
+                $("[name='Custom_Ifyesbywhichaccreditingbody']").removeAttr("required");
+                // Show Non-US Confimration and make required
+                $("[name='Custom_Ifapplicablewhenisyournextinstitutionalaccreditationvisityear']").attr("required","required");
+                $("[name='Custom_GovernmentDocuments']").attr("required","required");
+                $("#formpage2 .CustomFormTable tr:nth-child(3)").css("display","block");
+                $("#formpage2 .CustomFormTable tr:nth-child(4)").css("display","block");
+                $("#formpage2 .CustomFormTable tr:nth-child(5)").css("display","block");
+                $("#formpage2 .CustomFormTable tr:nth-child(6)").css("display","block");
+                $("#formpage2 .CustomFormTable tr:nth-child(7)").css("display","block");
+                $("#formpage2 .CustomFormTable tr:nth-child(8)").css("display","block");
+            }
+        }
+        function validate_page_one(){
+            var number_of_empty_fields = 0;
+            $("#formpage0 input, #formpage0 select, #formpage0 textarea").each(function(){
+                var current_field_value = $(this).val();
+                if(!current_field_value){
+                    number_of_empty_fields += 1;
+                }
+            });
+            if(number_of_empty_fields > 0){
+                $("#formpage_nextBtn").css("display","none");
+                $("#formpage_next::after").css("display","block");
+            }else{
+                $("#formpage_nextBtn").css("display","block");
+                $("#formpage_next::after").css("display","none");
+            }
+        }
+    });
+</script>
