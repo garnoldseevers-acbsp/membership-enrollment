@@ -407,7 +407,7 @@
 </style>
 <script type="text/javascript">
     $(document).ready(function(){
-        validate_page_one();
+        //validate_page_one();
         if($("[name='Custom_Country']").val()){
             var selected_country = $("[name='Custom_Country']").val();
             display_eligibility_requirements(selected_country);
@@ -429,7 +429,7 @@
                 $(this).css("border-color","#b7bf34");
                 $(this).css("color","#b7bf34");
             }
-            validate_page_one();
+            //validate_page_one();
         });
         $("[name='Custom_Country']").change(function(){
             console.log("change");
